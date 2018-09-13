@@ -34,9 +34,11 @@ object Test6 extends App {
 
   val e = dd.runWith(s).map { x ⇒
     println("xxxx =>>>" + x)
-
     x
   }
+
+  val aa = dd.runWith(Sink.seq).map(_.map(_.utf8String).mkString)
+  // .runForeach(println)
 
 }
 
