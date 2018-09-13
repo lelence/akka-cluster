@@ -1,6 +1,5 @@
 
-
-name := "akka-server"
+name := "akka-slick"
 
 version := "1.0"
 
@@ -13,11 +12,8 @@ libraryDependencies ++= {
 
   Seq(
     "com.typesafe.akka" %% "akka-actor" % akkaVersion,
-    // "com.typesafe.akka" %% "akka-stream-experimental" % akkaStreamVersion,
-    // "com.typesafe.akka" %% "akka-remote" % akkaVersion,
-    "com.typesafe.akka" %% "akka-cluster" % akkaVersion,
-    "com.typesafe.akka" %% "akka-cluster-tools" % akkaVersion,
-    "com.typesafe.akka" %% "akka-cluster-metrics" % akkaVersion,
+    "com.lightbend.akka" %% "akka-stream-alpakka-slick" % "0.20",
+     "mysql" % "mysql-connector-java" % "5.1.47",
     "com.typesafe.akka" %% "akka-testkit" % akkaVersion % Test,
     "org.scalatest" %% "scalatest" % "3.0.5" % Test
   )
